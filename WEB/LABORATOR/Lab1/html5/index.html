@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <title>Comanda</title>
+</head>
+
+<body>
+    <h1>Formular de comanda</h1>
+    <form id="form-div" action="POST">
+        <table id="form-table" style="border: 1px solid rgb(21, 18, 18)">
+            <thead>
+                <tr>
+                    <th>Date comanda</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <table id="form-table-user">
+                            <thead>
+                                <tr>
+                                    <th colspan="4">Adresa</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><label for="last_name"></label>Nume:</td>
+                                    <td><input id="last_name" type="text" maxlength=20 required></td>
+                                    <td><label for="first_name"></label>Prenume:</td>
+                                    <td><input id="first_name" type="text" maxlength=20 required></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="email">E-mail:</label></td>
+                                    <td><input id="email" type="text" maxlength=20 required></td>
+
+                                    <td><label for="phone_number">Nr. telefon:</label></td>
+                                    <td><input id="phone_number" type="text" maxlength=20 required></td>
+                                </tr>
+
+                                <tr>
+                                    <td rowspan="2"><label for="county"></label>Judet:</td>
+                                    <td rowspan="2">
+                                        <select id="county">
+                                            <option value="AR">Arad</option>
+                                            <option value="BV">Brașov</option>
+                                            <option value="B">București</option>
+                                            <option value="CJ">Cluj</option>
+                                            <option value="MM">Maramureș</option>
+                                            <option value="SB">Sibiu</option>
+                                            <option value="SV">Suceava</option>
+                                            <option value="TM">Timiș</option>
+                                        </select>
+                                    </td>
+                                    <td><label for="city">Oraș:</label></td>
+                                    <td><input id="city" type="text" maxlength=20 required></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="postal_code">Cod poștal:</label></td>
+                                    <td><input id="postal_code" type="text" maxlength=10 size="8" required></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="street">Stradă:</label></td>
+                                    <td><input id="street" type="text" maxlength=20 required></td>
+
+                                    <td><label for="building">Bloc:</label></td>
+                                    <td><input id="building" type="text" maxlength=5 size="5" required></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="entrance">Scară:</label></td>
+                                    <td><input id="entrance" type="text" maxlength=5 size="5" required></td>
+
+                                    <td><label for="apartment">Apartament:</label></td>
+                                    <td><input id="apartment" type="text" maxlength=5 size="5" required></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table id="form-table-delivery">
+                            <thead>
+                                <tr>
+                                    <th>Detalii livrare</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">Metode de livrare:</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Easybox:</td>
+                                                    <td>
+                                                        <input checked type="radio" name="livrare" value="Sameday">Sameday
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2">La domiciliu:</td>
+                                                    <td>
+                                                        <input type="radio" name="livrare" value="Fan">FAN Courier
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" name="livrare" value="Cargus">Cargus
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table bgcolor="red">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">Metoda de plata:</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>Cash la livrare</td>
+                                                    <td>
+                                                        <input type="radio" name="plata" value="cash">Cash
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Online cu cardul</td>
+                                                    <td>
+                                                        <input type="radio" name="plata" value="card">Card
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <input type="checkbox" name="gift_package"
+                                                            value="gift_packaged">Ambalare cadou
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="color">Culoare:</label></td>
+                                                    <td>
+                                                        <select disabled multiple id="color">
+                                                            <option value="red">Roșu</option>
+                                                            <option value="green">Verde</option>
+                                                            <option value="blue">Albastru</option>
+                                                            <option value="purple">Mov</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Observații:<br>
+                        <textarea required cols="40" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table id="form-table-questions">
+                            <thead>
+                                <tr>
+                                    <th>Intrebari</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <ol type="1" start="1">
+                                            <li>
+                                                Cum ți se pare <b>design-ul</b> site-ului?<br>
+                                                <ul>
+                                                    <li><input type="radio" name="design" value="good">Bun</li>
+                                                    <li><input type="radio" name="design" value="average">Mediocru</li>
+                                                    <li><input type="radio" name="design"
+                                                            value="bad"><strong>Rau</strong></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                De unde ai aflat de site-ul nostru?<br>
+                                                <input type="radio" name="source" value="google">Google
+                                                <input type="radio" name="source" value="online_ads">Reclame online
+                                                <input type="radio" name="source" value="friends">Prieteni
+                                                <input type="radio" name="source" value="tv">Televizor
+                                            </li>
+                                            <li>
+                                                Ce te-a făcut să comanzi de la noi?<br>
+                                                <input type="text" maxlength="200" size="150">
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <p>Apasă pe pisică pentru o <b>reducere</b> de 10%!</p>
+    <br><br>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <img title="spinning cat" src="https://i.kym-cdn.com/photos/images/original/002/486/154/c06.gif" height="500"
+            width="800" alt="Spinning cat">
+
+    </a>
+</body>
+
+</html>
